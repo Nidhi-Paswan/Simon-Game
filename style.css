@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Exo+2:wght@300&family=Audiowide&display=swap');
+
+.title {
+  font-family: 'Orbitron', sans-serif; /* For "Simon" */
+  font-weight: 700;
+}
+
+.subtitle {
+  font-family: 'Exo 2', sans-serif; /* For instructions text */
+  font-weight: 300;
+}
+
+.play-btn {
+  font-family: 'Audiowide', sans-serif; /* For ":: play ::" */
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.footer {
+  font-family: Arial, sans-serif; /* For footer link */
+  font-size: 0.8rem;
+}
+
+body{
+    text-align: center;
+    background-color: #282c34;
+    color: white;
+}
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    
+}
+.btn {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 20%;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+/* .btn:hover {
+    opacity: 1;
+} */
+.green {
+    background-color: #4CAF50;
+}
+.red {
+    background-color: #F44336;
+}
+.yellow {
+    background-color: #FFEB3B;
+}
+.blue {
+    background-color: #2196F3;
+}
+
+/* .montserrat-<uniquifier> {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal; */
+
+h1 {
+      position: relative;
+      font-family:"Montserrat", sans-serif; 
+      font-weight: 900; /* Or ExtraBold */
+      font-size: 10vw;
+      margin: 40px 0;
+      color: white; /* front stays white */
+      z-index: 1;
+      text-transform: uppercase;
+    }
+
+    /* Back layer */
+    h1::before {
+      content: "Simon";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      font-size: 15vw; /* Make it significantly larger and responsive */
+    z-index: -1;
+    animation: colorChange 5s infinite alternate;
+      
+    }
+
+    /* Animation for back text */
+    @keyframes colorChange {
+      0%   { color: red; }
+      25%  { color: green; }
+      50%  { color: blue; }
+      75%  { color: yellow; }
+      100% { color: red; }
+    }
+    .flash{
+        background-color: white;
+    }
+    .userFlash{
+        background-color: rgb(151, 223, 232);
+    }
+    a{
+        text-decoration: none;
+        color: white;
+        padding: 10px 20px;
+        border: 2px solid white;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    h2{
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 500;
+  font-size: 3rem;
+  
+}
+p{
+  font-family: 'Exo 2', sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+.play-btn{
+    font-family: 'Audiowide', sans-serif; /* For ":: play ::" */
+  font-size: 4rem;
+  letter-spacing: 2px;
+   border: none;       /* removes the border */
+  outline: none;      /* removes the outline */
+}
+.actbtn{
+  font-family: 'Audiowide', sans-serif; /* For ":: start ::" */
+  font-size: 4rem;
+  letter-spacing: 2px;
+  margin: 1rem;    /* adds margin */
+  background: transparent;  /* no background */
+  border: none;             /* no border */
+  outline: none;            /* no focus outline */
+  color: white;             /* text color */
+  font-size: 2rem;
+  cursor: pointer;
+
+}
+.actbtn:hover{
+  background-color: rgba(255, 255, 255, 0.2);
+}
+h3{
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    animation: glow 1.5s infinite alternate;
+}
+@keyframes glow {
+  from { text-shadow: 0 0 5px #fff, 0 0 10px #4CAF50; }
+  to   { text-shadow: 0 0 20px #F44336, 0 0 30px #2196F3; }
+}
